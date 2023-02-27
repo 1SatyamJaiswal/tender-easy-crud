@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div>
+        <form name="register" id="register" method="post" action="success">
+            <div>
+                <label for="fname">First Name </label>
+                <input type="text" name="fname" id="fname" required/>
+            </div>
+            <div>
+                <label for="mname">Middle Name </label>
+                <input type="text" name="mname" id="mname"/>
+            </div>
+            <div>
+                <label for="nname">Last Name </label>
+                <input type="text" name="lname" id="lname"/>
+            </div>
+            <div>
+                <label for="gender">Gender </label>
+                <input list="gender" name="gender" required>
+                <datalist id="gender">
+                  <option value="Male">
+                  <option value="Female">
+                  <option value="Others">
+                </datalist>
+            </div>
+            <div>
+                <label>Select the Job Type: </label>
+                <input type="radio" id="office" name="employee" id="office" value="office">
+                <label for="office">Office </label>
+                <input type="radio" id="engineer" name="employee" id="engineer" value="engineer">
+                <label for="engineer">Engineer </label>
+            </div>
+            <div>
+                <label for="salary">Salary </label>
+                <input type="number" name="salary" id="salary"/>
+            </div>
+            <div>
+                <label for="uid">User ID </label>
+                <input type="text" name="password" id="password"/>
+            </div>
+            <div>
+                <label for="password">Password </label>
+                <input type="password" name="password" id="password"/>
+            </div>
+            <div id="submit">
+                <button type="submit">Submit </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

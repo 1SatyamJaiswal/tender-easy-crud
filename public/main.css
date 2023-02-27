@@ -1,0 +1,29 @@
+body{
+    background-color: #5cdb95;
+}
+
+form#register{
+    vertical-align: middle;
+    max-width: 400px;
+    margin: auto;
+    padding: 16px;
+    border: 1px;
+    border-radius: 16px;
+    background-color: #05386B;
+    color: #edf5e1;
+    text-align: left;
+}
+
+#submit{
+    text-align: center;
+}
+
+div{
+    padding: 10px;
+}
+
+input{
+    text-align: justify;
+    border-color: #379863;
+    border-radius: 10px;
+}

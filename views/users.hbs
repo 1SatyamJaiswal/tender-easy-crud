@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-6"><h1>Active Users</h1></div>
+</div>
+
+<table class="table table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">User Name</th>
+      <th scope="col">Job Type</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Gender</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each rows}}
+    <tr>
+      <td>{{this.User_Name}}</td>
+      <td>{{this.User_Type}}</td>
+      <td>{{this.F_Name}}</td>
+      <td>{{this.L_Name}}</td>
+      <td>{{this.Age}}</td>
+      <td>{{this.Gender}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

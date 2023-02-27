@@ -1,0 +1,46 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/adduser">New User</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Additional Details</li>
+  </ol>
+</nav>
+
+{{#if alert}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+ {{alert}}
+ <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+
+{{#each rows}}
+<form class="row g-3 needs-validation" method="POST" action="/additional/{{this.User_Name}}" novalidate>
+    <div class="col-6">
+    <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="floatingInput" value="{{this.User_Name}}" placeholder="Username" /required name="username">
+    <label for="floatingInput">Username</label>
+    </div>
+    </div>
+    <div class="col-6">
+    <div class="form-floating">
+    <input type="text" class="form-control" id="floatingPassword" value="{{this.Qualification}}" placeholder="Password" /required name="qualification">
+    <label for="floatingPassword">Qualification</label>
+    </div>
+    </div>
+    <div class="col-4">
+    <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="floatingInput" value="{{this.Location}}" placeholder="eg.John" /required name="location">
+    <label for="floatingInput">Location</label>
+    </div>
+    </div>
+    <div class="col-4">
+    <div class="form-floating mb-3">
+    <input type="date" class="form-control" id="floatingInput" value="{{this.Joining_Date}}" placeholder="eg.Dave" name="date">
+    <label for="floatingInput">Joining Date</label>
+    </div>
+    </div>
+    <div class="col-12 d-grid">
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+{{/each}}
+</form>

@@ -1,0 +1,68 @@
+<section style="background-color: #379683;">
+  <div class="container py-5">
+{{#each rows}}
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card mb-4">
+          <div class="card-body text-center">
+            <h5 class="my-3">{{this.Company_Name}}</h5>
+             <div class="d-flex justify-content-center mb-2">
+               <a href="/addprojects/{{this.Tender_Id}}" type="button" class="btn btn-primary"><i class="bi bi-plus"> Work on Project</i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Tender Id</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{this.Tender_Id}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Location</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{this.Location}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Budget</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{this.Estimated_Cost}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Start Date</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{this.Start_Date}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Details</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{this.Tender_Info}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+{{/each}}
+

@@ -1,0 +1,26 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Login Page</li>
+  </ol>
+</nav>
+
+{{#if alert}}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+ {{alert}}
+ <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+
+<form class="row g-3 needs-validation" method="POST" action="/login" novalidate>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Username</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" value="{{this.User_Name}}" aria-describedby="emailHelp" name="username">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1"  class="form-label">Password</label>
+    <input type="password" class="form-control" value="{{this.Password}}" id="exampleInputPassword1" name="password">
+  </div> 
+  <button type="submit" class="btn btn-primary">Login</button>
+  <p>Don't have an account?<a href="/adduser">Click here</a></p>
+</form>

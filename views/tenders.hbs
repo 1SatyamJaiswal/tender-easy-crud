@@ -1,0 +1,86 @@
+<div class="row">
+      <div class="col">
+        <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/login">User</a></li>
+            <li class="breadcrumb-item"><a onclick="history.back()" >User Profile</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Tender</li>
+          </ol>
+        </nav>
+      </div>
+  </div>
+{{#each rows}}
+<div class="row">
+      <div class="col-lg-4">
+        <div class="card mb-4">
+          <div class="card-body text-center">
+            <h5 class="my-3">{{this.Tender_Id}}</h5>
+            <div class="d-flex justify-content-center mb-2">
+              <a href="/edittenders/{{this.User_Name}}/{{this.Tender_Id}}" type="button" class="btn btn-outline-primary ms-1"><i class="bi bi-pencil"> Edit Tender</i></a>
+              <a href="/tenders/{{this.User_Name}}/{{this.Tender_Id}}" type="button" class="btn btn-outline-primary ms-1"><i class="bi bi-trash"> Delete Tender</i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Company</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{this.Company_Name}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">ID</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{this.Tender_Id}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Budget</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{this.Estimated_Cost}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Location</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{this.Location}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Start Date</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{this.Start_Date}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Details</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{this.Tender_Info}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/each}}
